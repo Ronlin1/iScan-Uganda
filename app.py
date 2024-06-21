@@ -46,9 +46,10 @@ print(twilio_auth_token)
 
 def translate_to_luganda(sentence):
     prompt = f"""I will give you some data from a business card, analyse it..
-    then extract important info then summarise' You have just
-    scanned a business card of {sentence} ... (Complete)' """
-    
+    then extract important info & insights, then summarise it in not more
+    than 50 words starting' You have just scanned a business card
+    of {sentence} ... (Complete)' """
+
     # Call the generate_content method
     response = model.generate_content(prompt,
     safety_settings={
@@ -65,7 +66,7 @@ def translate_to_luganda(sentence):
         if candidate.content and candidate.content.parts:
             translated_sentence = candidate.content.parts[0].text.strip()
             return translated_sentence
-            
+
     logging.error("Translation failed, response blocked or invalid.")
     return "Translation failed, response blocked or invalid."
 
