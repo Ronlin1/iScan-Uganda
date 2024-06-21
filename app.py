@@ -96,6 +96,7 @@ def process_scan():
 def get_product_info(product_id):
     try:
         product_info = product_info_storage.get(product_id, 'Product not found')
+        print(product_info)
 
         if product_info == 'Product not found':
             return jsonify({'error': 'Product not found'}), 404
@@ -116,6 +117,7 @@ def get_product_info(product_id):
         return jsonify({'product_info': translated_info})
     except Exception as e:
         logging.error(f"Error in get_product_info: {e}")
+        print(e)
         return jsonify({'error': str(e)}), 500
 
 # if __name__ == '__main__':
