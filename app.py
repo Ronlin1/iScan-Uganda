@@ -15,8 +15,8 @@ genai.configure(api_key=os.environ.get('GENAI_API_KEY'))
 model = genai.GenerativeModel('gemini-1.5-flash')
 app = Flask(__name__)
 
-# Dictionary to store product information
-product_info_storage = {}
+# Dictionary to store business information
+business_info_storage = {}
 
 # Twilio configuration
 twilio_account_sid = os.environ.get('TWILIO_ACCOUNT_SID')
@@ -32,6 +32,8 @@ sendgrid_from_email = os.environ.get('SENDGRID_MAIL')
 RECIPIENT_MAIL = os.environ.get('RECIPIENT_MAIL')
 RECIPIENT_NO = os.environ.get('RECIPIENT_NO')
 
+Language = 'Luganda'
+
 # DEBUGGING---
 print(RECIPIENT_MAIL)
 print(RECIPIENT_NO)
@@ -42,9 +44,10 @@ print(twilio_account_sid)
 print(twilio_auth_token)
 
 def translate_to_luganda(sentence):
-    prompt = f"""I will give you a json format data, analyse it..then extract expiry date and approximate when
-    the product will expire, then create a short sentence, then Translate it into Luganda.
-    Don't give me the pronunciation, just return the translated sentence. Here it is: '{sentence}' """
+    prompt = f"""I will give you some data from a business card, analyse it..
+    then extract important info then create a short sentence, then Translate
+    it into '{Language}'.Don't give me the pronunciation, just return the
+    translated details. Here is the data: ' You have just scanned {sentence}' """
 
     # Call the generate_content method
     response = model.generate_content(prompt,
@@ -85,29 +88,29 @@ def send_email(subject, html_content, to_email):
 def process_scan():
     try:
         data = request.json
-        product_info = data.get('info', '')
+        business_info = data.get('info', '')
 
-        # Save the product information in a dictionary
-        product_id = len(product_info_storage) + 1
-        product_info_storage[product_id] = product_info
-        print(product_info_storage)
+        # Save the business information in a dictionary
+        business_id = len(business_info_storage) + 1
+        business_info_storage[business_id] = business_info
+        print(business_info_storage)
 
-        return jsonify({'message': 'Product information received', 'product_id': product_id})
+        return jsonify({'message': 'Business information received', 'business_id': business_id})
     except Exception as e:
         logging.error(f"Error in process_scan: {e}")
         return jsonify({'error': str(e)}), 500
 
-@app.route('/get-product-info/<int:product_id>', methods=['GET'])
-def get_product_info(product_id):
+@app.route('/get-business-info/<int:business_id>', methods=['GET'])
+def get_business_info(business_id):
     try:
-        product_info = product_info_storage.get(product_id, 'Product not found')
-        print(product_info)
+        business_info = business_info_storage.get(business_id, 'Business not found')
+        print(business_info)
 
-        if product_info == 'Product not found':
-            return jsonify({'error': 'Product not found'}), 404
+        if business_info == 'Business not found':
+            return jsonify({'error': 'Business not found'}), 404
 
-        # Translate product information to Luganda
-        translated_info = translate_to_luganda(product_info)
+        # Translate business information to Luganda
+        translated_info = translate_to_luganda(business_info)
 
         # Send the translated information via SMS
         recipient_phone_number = RECIPIENT_NO
@@ -115,16 +118,16 @@ def get_product_info(product_id):
 
         # Send the translated information via email
         recipient_email = RECIPIENT_MAIL
-        subject = 'Your iScan Results'
+        subject = 'Your iScan Business Card Results 🎉'
         html_content = f'<strong>{translated_info}</strong>'
         send_email(subject, html_content, recipient_email)
 
-        return jsonify({'product_info': translated_info})
+        return jsonify({'business_info': translated_info})
     except Exception as e:
-        logging.error(f"Error in get_product_info: {e}")
+        logging.error(f"Error in get_business_info: {e}")
         print(e)
         return jsonify({'error': str(e)}), 500
 
-print(product_info_storage)
+print(business_info_storage)
 # if __name__ == '__main__':
 #     app.run(debug=True, host='0.0.0.0', port=5000)
