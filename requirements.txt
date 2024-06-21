@@ -4,3 +4,4 @@ waitress
 Gunicorn
 sendgrid
 google-generativeai
+twilio
