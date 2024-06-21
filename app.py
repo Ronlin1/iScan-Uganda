@@ -47,7 +47,11 @@ def translate_to_luganda(sentence):
     Don't give me the pronunciation, just return the translated sentence. Here it is: '{sentence}' """
 
     # Call the generate_content method
-    response = model.generate_content(prompt)
+    response = model.generate_content(prompt,
+    safety_settings={
+        HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+    })
 
     # Extract the translated sentence
     translated_sentence = response.text.strip()
