@@ -32,6 +32,15 @@ sendgrid_from_email = os.environ.get('SENDGRID_MAIL')
 RECIPIENT_MAIL = os.environ.get('RECIPIENT_MAIL')
 RECIPIENT_NO = os.environ.get('RECIPIENT_NO')
 
+# DEBUGGING---
+print(RECIPIENT_MAIL)
+print(RECIPIENT_NO)
+print(sendgrid_from_email)
+print(sendgrid_api_key)
+print(twilio_phone_number)
+print(twilio_account_sid)
+print(twilio_auth_token)
+
 def translate_to_luganda(sentence):
     prompt = f"""I will give you a json format data, analyse it..then extract expiry date and approximate when
     the product will expire, then create a short sentence, then Translate it into Luganda.
