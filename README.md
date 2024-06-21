@@ -1,6 +1,6 @@
 # iScan : 
 
-iScan is a Flutter mobile application designed to simplify business card management using QR codes, AI, and Twilio services for instant communication.
+iScan is a Flutter mobile application designed to simplify business card management using QR codes, AI, and Twilio services for instant communication. The app is not yet hosted on the Play store or App Store.
 
 ## Overview
 
