@@ -28,17 +28,18 @@ In today's digital age, traditional printed business cards contribute significan
 
 Contributions are welcome! If you have suggestions, feature requests, or bug reports, please open an issue or submit a pull request.
 
-## Feature Implementations
-- **Instant Contact Saving**
-- **Marketing Database Creation Using Text to SQL Generative Capability**
-- **Sustainability and Eco-Friendliness**
-- **Multi-Language Support**
-- **Real-Time Notifications**
-- **QR Code Placement Consultation**
-- **Analytics Dashboard**
-- **Customizable Templates**
-- **Integration with Calendar Apps**
-- **QR Code Creation via an API**
+## Future Implementations
+I hope to add the following soon.....
+- [ ] **Instant Contact Saving**
+- [ ] **Marketing Database Creation Using Text to SQL Generative Capability**
+- [ ] **Sustainability and Eco-Friendliness**
+- [ ] **Multi-Language Support**
+- [ ] **Real-Time Notifications**
+- [ ] **QR Code Placement Consultation**
+- [ ] **Analytics Dashboard**
+- [ ] **Customizable Templates**
+- [ ] **Integration with Calendar Apps**
+- [ ] **QR Code Creation via an API**
 
 ## License
 
