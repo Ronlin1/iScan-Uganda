@@ -14,6 +14,7 @@ In today's digital age, traditional printed business cards contribute significan
 - **SendGrid Integration**: Send detailed information via email using SendGrid's email service.
 - **Eco-friendly Solution**: Reduce carbon footprint by minimizing the use of printed business cards.
 - **Cross-platform**: Built with Flutter, ensuring compatibility across Android and iOS devices.
+- **Great UI**: Selfie mode is included and Flash Light is to handle Uganda's continuous blackouts 😂
 
 
 ## Usage
@@ -26,6 +27,18 @@ In today's digital age, traditional printed business cards contribute significan
 ## Contributing
 
 Contributions are welcome! If you have suggestions, feature requests, or bug reports, please open an issue or submit a pull request.
+
+## Feature Implementations
+- **Instant Contact Saving**
+- **Marketing Database Creation Using Text to SQL Generative Capability**
+- **Sustainability and Eco-Friendliness**
+- **Multi-Language Support**
+- **Real-Time Notifications**
+- **QR Code Placement Consultation**
+- **Analytics Dashboard**
+- **Customizable Templates**
+- **Integration with Calendar Apps**
+- **QR Code Creation via an API**
 
 ## License
 
