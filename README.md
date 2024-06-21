@@ -1,6 +1,6 @@
 # iScan : 
 
-iScan is a Flutter mobile application designed to simplify business card management using QR codes, AI, and Twilio services for instant communication. The app is not yet hosted on the Play store or App Store.
+iScan is a Flutter mobile application designed to simplify business card management using QR codes, AI, and Twilio services for instant communication. The app is not yet hosted on the Play store or App Store. The mobile section is entirely being developed from Flutlab.
 
 ## Overview
 
@@ -48,10 +48,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 - [Flutter](https://flutter.dev/) - For providing a framework for building cross-platform apps.
+- [Flutlab](https://flutlab.io/) - Flutter Online IDE
 - [Twilio](https://www.twilio.com/) - For enabling seamless SMS communication.
 - [SendGrid](https://sendgrid.com/) - For facilitating reliable email delivery.
-- [Google Generative AI](https://www.google.com) - For providing advanced AI capabilities through Gemini API (RAG).
-
+- [Google Generative AI](https://ai.google.dev/gemini-api/) - For providing advanced AI capabilities through Gemini API (RAG).
+- [Flask - Python](https://flask.palletsprojects.com/) - Flutter Online IDE
+- 
 ## Contact
 
 For questions or inquiries about iScan, please contact [Your Name](mailto:ronlinx6@gmail,com).
