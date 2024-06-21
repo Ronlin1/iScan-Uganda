@@ -95,6 +95,7 @@ def process_scan():
         business_id = len(business_info_storage) + 1
         business_info_storage[business_id] = business_info
         print(business_info_storage)
+        get_business_info(business_id)
 
         return jsonify({'message': 'Business information received', 'business_id': business_id})
     except Exception as e:
