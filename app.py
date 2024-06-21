@@ -25,7 +25,7 @@ twilio_phone_number = os.environ.get('TWILIO_PHONE_NUMBER')
 client = Client(twilio_account_sid, twilio_auth_token)
 
 # SendGrid configuration
-sendgrid_api_key = os.environ.get(api_key='SENDGRID_API_KEY')
+sendgrid_api_key = os.environ.get('SENDGRID_API_KEY')
 sendgrid_from_email = os.environ.get('SENDGRID_MAIL')
 
 # RECIPIENT info
