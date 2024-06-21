@@ -48,18 +48,24 @@ def translate_to_luganda(sentence):
     prompt = f"""I will give you some data from a business card, analyse it..
     then extract important info then create a short sentence, then Translate
     it into '{Language}'.Don't give me the pronunciation, just return the
-    translated details. Here is the data: ' You have just scanned {sentence}' """
+    translated details. Here is the data: 'You have just scanned {sentence}' """
 
     # Call the generate_content method
-    response = model.generate_content(prompt,
-    safety_settings={
-        HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
-        HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
-    })
+    response = model.generate_content(
+        prompt,
+        safety_settings={
+            HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+            HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+        }
+    )
 
-    # Extract the translated sentence
-    translated_sentence = response.text.strip()
-    return translated_sentence
+    # Check for valid response
+    if response.candidates and response.candidates[0].text:
+        translated_sentence = response.candidates[0].text.strip()
+        return translated_sentence
+    else:
+        logging.error("Translation failed, response blocked or invalid.")
+        return "Translation failed, response blocked or invalid."
 
 def send_sms(message, to_phone_number):
     try:
