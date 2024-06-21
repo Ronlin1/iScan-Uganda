@@ -124,5 +124,6 @@ def get_product_info(product_id):
         print(e)
         return jsonify({'error': str(e)}), 500
 
+print(product_info_storage)
 # if __name__ == '__main__':
 #     app.run(debug=True, host='0.0.0.0', port=5000)
