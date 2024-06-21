@@ -33,9 +33,10 @@ sendgrid_from_email = os.environ.get('SENDGRID_MAIL')
 RECIPIENT_MAIL = os.environ.get('RECIPIENT_MAIL')
 RECIPIENT_NO = os.environ.get('RECIPIENT_NO')
 
+# Upcoming Feature (For Multilingual support)
 Language = 'Luganda'
 
-# DEBUGGING---
+# DEBUGGING --- IF YOU HAVE THESE: YOU CAN TEST WITH DUMMY DATA in the test file
 print(RECIPIENT_MAIL)
 print(RECIPIENT_NO)
 print(sendgrid_from_email)
@@ -44,7 +45,7 @@ print(twilio_phone_number)
 print(twilio_account_sid)
 print(twilio_auth_token)
 
-def translate_to_luganda(sentence):
+def summarize(sentence):
     prompt = f"""I will give you some data from a business card, analyse it..
     then extract important info & insights, then summarise it in not more
     than 50 words starting' You have just scanned a business card
@@ -61,14 +62,14 @@ def translate_to_luganda(sentence):
 
     # Ensure the response has candidates
     if response and response.candidates:
-        # Extract the translated sentence from the first candidate's content parts
+        # Extract the summarised sentence from the first candidate's content parts
         candidate = response.candidates[0]
         if candidate.content and candidate.content.parts:
-            translated_sentence = candidate.content.parts[0].text.strip()
-            return translated_sentence
+            summarised_sentence = candidate.content.parts[0].text.strip()
+            return summarised_sentence
 
-    logging.error("Translation failed, response blocked or invalid.")
-    return "Translation failed, response blocked or invalid."
+    logging.error("summarisation failed, response blocked or invalid.")
+    return "summarisation failed, response blocked or invalid."
 
 def send_sms(message, to_phone_number):
     try:
@@ -104,7 +105,7 @@ def process_scan():
         # Save the business information in a dictionary
         business_id = len(business_info_storage) + 1
         business_info_storage[business_id] = business_info
-        print(business_info_storage)
+        # print(business_info_storage)
         get_business_info(business_id)
 
         return jsonify({'message': 'Business information received', 'business_id': business_id})
@@ -122,19 +123,19 @@ def get_business_info(business_id):
             return jsonify({'error': 'Business not found'}), 404
 
         # Translate business information to Luganda
-        translated_info = translate_to_luganda(business_info)
+        summarised_info = summarize(business_info)
 
-        # Send the translated information via SMS
+        # Send the summarised information via SMS
         recipient_phone_number = RECIPIENT_NO
-        send_sms(translated_info, recipient_phone_number)
+        send_sms(summarised_info, recipient_phone_number)
 
-        # Send the translated information via email
+        # Send the summarised information via email
         recipient_email = RECIPIENT_MAIL
         subject = 'Your iScan Business Card Results 🎉'
-        html_content = f'<strong>{translated_info}</strong>'
+        html_content = f'<strong>{summarised_info}</strong>'
         send_email(subject, html_content, recipient_email)
 
-        return jsonify({'business_info': translated_info})
+        return jsonify({'business_info': summarised_info})
     except Exception as e:
         logging.error(f"Error in get_business_info: {e}")
         print(e)
