@@ -90,6 +90,7 @@ def process_scan():
         # Save the product information in a dictionary
         product_id = len(product_info_storage) + 1
         product_info_storage[product_id] = product_info
+        print(product_info_storage)
 
         return jsonify({'message': 'Product information received', 'product_id': product_id})
     except Exception as e:
