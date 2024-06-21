@@ -88,6 +88,7 @@ def send_email(subject, html_content, to_email):
 def process_scan():
     try:
         data = request.json
+        print(data)
         business_info = data.get('info', '')
 
         # Save the business information in a dictionary
