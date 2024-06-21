@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import google.generativeai as genai
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from twilio.rest import Client
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
