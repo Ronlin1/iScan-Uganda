@@ -43,6 +43,11 @@ I hope to add the following soon.....
 - [ ] **Integration with Calendar Apps**
 - [ ] **QR Code Creation via an API**
 
+## Code Structure
+The Main API Logic is `app.py` file handling all Twilio and Summarization with Generative AI (Gemini API). The web folder contains the website portfolio and the code for Flutter app is private currently.
+
+- Visit Web: https://iscanweb.onrender.com/
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
