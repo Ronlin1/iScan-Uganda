@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask import Flask, render_template
 import google.generativeai as genai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from twilio.rest import Client
@@ -14,6 +15,7 @@ logging.basicConfig(level=logging.INFO)
 genai.configure(api_key=os.environ.get('GENAI_API_KEY'))
 # Choose a model that's appropriate for your use case.
 model = genai.GenerativeModel('gemini-1.5-flash')
+
 app = Flask(__name__)
 
 # Dictionary to store business information
@@ -68,7 +70,7 @@ def summarize(sentence):
             summarised_sentence = candidate.content.parts[0].text.strip()
             return summarised_sentence
 
-    logging.error("summarisation failed, response blocked or invalid.")
+    logging.error("Summarisation failed, response blocked or invalid.")
     return "summarisation failed, response blocked or invalid."
 
 def send_sms(message, to_phone_number):
@@ -122,7 +124,7 @@ def get_business_info(business_id):
         if business_info == 'Business not found':
             return jsonify({'error': 'Business not found'}), 404
 
-        # Translate business information to Luganda
+        # Summarise business information to Luganda
         summarised_info = summarize(business_info)
 
         # Send the summarised information via SMS
@@ -142,5 +144,6 @@ def get_business_info(business_id):
         return jsonify({'error': str(e)}), 500
 
 print(business_info_storage)
+
 # if __name__ == '__main__':
 #     app.run(debug=True, host='0.0.0.0', port=5000)
