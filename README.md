@@ -19,7 +19,7 @@ In today's digital age, traditional printed business cards contribute significan
 - **Eco-friendly Solution**: Reduce carbon footprint by minimizing the use of printed business cards.
 - **Cross-platform**: Built with Flutter, ensuring compatibility across Android and iOS devices.
 - **Great UI**: Selfie mode is included and Flash Light is to handle Uganda's continuous blackouts 😂
-![](https://github.com/Ronlin1/iScan//blob/main/QRCODES.png)
+![](QRCODES.png)
 
 ## Usage
 
@@ -32,7 +32,7 @@ In today's digital age, traditional printed business cards contribute significan
 
 Contributions are welcome! If you have suggestions, feature requests, or bug reports, please open an issue or submit a pull request.
 
-![](https://github.com/Ronlin1/iScan//blob/main/iSCANQR.png)
+![](iSCANQR.png)
 
 ## Future Implementations
 I hope to add the following soon.....
