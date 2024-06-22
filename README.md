@@ -8,6 +8,8 @@ iScan is a Flutter mobile application designed to simplify business-card managem
 
 In today's digital age, traditional printed business cards contribute significantly to our carbon footprint and can be easily lost or misplaced. iScan addresses these challenges by allowing users to scan QR codes from business cards, extract relevant information, post the data to a flas API, then summarize it using Gemini API (RAG) Generative AI, and instantly receive the details via Twilio SMS or SendGrid email. This eliminates the need for physical cards and ensures that valuable connections are never lost.
 
+![](iSCAN_T.png)
+
 ## Features
 
 - **QR Code Scanning**: Scan QR codes from business cards or any QR-enabled material.
@@ -17,7 +19,7 @@ In today's digital age, traditional printed business cards contribute significan
 - **Eco-friendly Solution**: Reduce carbon footprint by minimizing the use of printed business cards.
 - **Cross-platform**: Built with Flutter, ensuring compatibility across Android and iOS devices.
 - **Great UI**: Selfie mode is included and Flash Light is to handle Uganda's continuous blackouts 😂
-
+![](QRCODES.png)
 
 ## Usage
 
@@ -29,6 +31,8 @@ In today's digital age, traditional printed business cards contribute significan
 ## Contributing
 
 Contributions are welcome! If you have suggestions, feature requests, or bug reports, please open an issue or submit a pull request.
+
+![](iScanQR.png)
 
 ## Future Implementations
 I hope to add the following soon.....
@@ -42,6 +46,11 @@ I hope to add the following soon.....
 - [ ] **Customizable Templates**
 - [ ] **Integration with Calendar Apps**
 - [ ] **QR Code Creation via an API**
+
+## Code Structure
+The Main API Logic is `app.py` file handling all Twilio and Summarization with Generative AI (Gemini API). The web folder contains the website portfolio and the code for Flutter app is private currently.
+
+- Visit Web: https://iscanweb.onrender.com/
 
 ## License
 
