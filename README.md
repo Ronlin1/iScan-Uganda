@@ -32,7 +32,7 @@ In today's digital age, traditional printed business cards contribute significan
 
 Contributions are welcome! If you have suggestions, feature requests, or bug reports, please open an issue or submit a pull request.
 
-![](iSCANQR.png)
+![](iScanQR.png)
 
 ## Future Implementations
 I hope to add the following soon.....
