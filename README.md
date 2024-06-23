@@ -19,7 +19,7 @@ In today's digital age, traditional printed business cards contribute significan
 - **Eco-friendly Solution**: Reduce carbon footprint by minimizing the use of printed business cards.
 - **Cross-platform**: Built with Flutter, ensuring compatibility across Android and iOS devices.
 - **Great UI**: Selfie mode is included and Flash Light is to handle Uganda's continuous blackouts 😂 and night events.
-![](images/QRCODES.png)
+![](images/iScanQRF.png)
 
 ## Usage
 
@@ -33,7 +33,7 @@ In today's digital age, traditional printed business cards contribute significan
 
 Contributions are welcome! If you have suggestions, feature requests, or bug reports, please open an issue or submit a pull request.
 
-![](images/iScanQR.png)
+
 
 ## Future Implementations
 The user will be able to signup with their information so that they receive these notification via sms and email; I hope to add the following soon.....
@@ -49,6 +49,7 @@ The user will be able to signup with their information so that they receive thes
 - [ ] **Integration with Calendar Apps**
 - [ ] **QR Code Creation via an API**
 
+![](images/iScanQR.png)
 
 ## Code Structure
 The Main API Logic is `app.py` file handling all Twilio and Summarization with Generative AI (Gemini API). The web folder contains the website portfolio and the code for Flutter app is private currently.
