@@ -33,8 +33,6 @@ In today's digital age, traditional printed business cards contribute significan
 
 Contributions are welcome! If you have suggestions, feature requests, or bug reports, please open an issue or submit a pull request.
 
-
-
 ## Future Implementations
 The user will be able to signup with their information so that they receive these notification via sms and email; I hope to add the following soon.....
 
@@ -70,7 +68,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Google Generative AI](https://ai.google.dev/gemini-api/) - For providing advanced AI capabilities through Gemini API (RAG).
 - [Flask - Python](https://flask.palletsprojects.com/) - Building the API
 - [Render](https://render.com/) - Hosting the API
+- [Canva](https://canva.com/) - Media & Graphics
 
 ## Contact
 
-For questions or inquiries about iScan, please contact [Your Name](mailto:ronlinx6@gmail,com).
+For questions or inquiries about iScan, please contact [Afro Boy](mailto:ronlinx6@gmail,com).
