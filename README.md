@@ -3,12 +3,12 @@
 iScan is a Flutter mobile application designed to simplify business-card management using QR codes, AI, and Twilio services for instant communication. The app is not yet hosted on the Play store or App Store. The front-end is entirely being developed from Flutlab and Python Flask for the API hosted on Render.
 
 📌 Note: Mobile Flutter Source Code is Private; Available on request: But you can try my early version [here](https://tinyurl.com/ym9w4x56). (It is currently hard-coded to send to my phone & email)
- 
+
 ## Overview
 
 In today's digital age, traditional printed business cards contribute significantly to our carbon footprint and can be easily lost or misplaced. iScan addresses these challenges by allowing users to scan QR codes from business cards, extract relevant information, post the data to a flas API, then summarize it using Gemini API (RAG) Generative AI, and instantly receive the details via Twilio SMS or SendGrid email. This eliminates the need for physical cards and ensures that valuable connections are never lost.
 
-![](iSCAN_T.png)
+![](images/iSCAN_T.png)
 
 ## Features
 
@@ -19,7 +19,7 @@ In today's digital age, traditional printed business cards contribute significan
 - **Eco-friendly Solution**: Reduce carbon footprint by minimizing the use of printed business cards.
 - **Cross-platform**: Built with Flutter, ensuring compatibility across Android and iOS devices.
 - **Great UI**: Selfie mode is included and Flash Light is to handle Uganda's continuous blackouts 😂
-![](QRCODES.png)
+![](images/QRCODES.png)
 
 ## Usage
 
@@ -32,10 +32,11 @@ In today's digital age, traditional printed business cards contribute significan
 
 Contributions are welcome! If you have suggestions, feature requests, or bug reports, please open an issue or submit a pull request.
 
-![](iScanQR.png)
+![](images/iScanQR.png)
 
 ## Future Implementations
-I hope to add the following soon.....
+The user will be able to signup with their information so that they receive these notification via sms and email; I hope to add the following soon.....
+
 - [ ] **Instant Contact Saving**
 - [ ] **Marketing Database Creation Using Text to SQL Generative Capability**
 - [ ] **Sustainability and Eco-Friendliness**
@@ -47,10 +48,12 @@ I hope to add the following soon.....
 - [ ] **Integration with Calendar Apps**
 - [ ] **QR Code Creation via an API**
 
+
 ## Code Structure
 The Main API Logic is `app.py` file handling all Twilio and Summarization with Generative AI (Gemini API). The web folder contains the website portfolio and the code for Flutter app is private currently.
 
 - Visit Web: https://iscanweb.onrender.com/
+- Visit Demo: https://tinyurl.com/2xd7dkhb
 
 ## License
 
@@ -65,10 +68,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Google Generative AI](https://ai.google.dev/gemini-api/) - For providing advanced AI capabilities through Gemini API (RAG).
 - [Flask - Python](https://flask.palletsprojects.com/) - Building the API
 - [Render](https://render.com/) - Hosting the API
-  
+
 ## Contact
 
 For questions or inquiries about iScan, please contact [Your Name](mailto:ronlinx6@gmail,com).
-
-
-
