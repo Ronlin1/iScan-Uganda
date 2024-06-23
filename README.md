@@ -18,15 +18,16 @@ In today's digital age, traditional printed business cards contribute significan
 - **SendGrid Integration**: Send detailed information via email using SendGrid's email service.
 - **Eco-friendly Solution**: Reduce carbon footprint by minimizing the use of printed business cards.
 - **Cross-platform**: Built with Flutter, ensuring compatibility across Android and iOS devices.
-- **Great UI**: Selfie mode is included and Flash Light is to handle Uganda's continuous blackouts 😂
+- **Great UI**: Selfie mode is included and Flash Light is to handle Uganda's continuous blackouts 😂 and night events.
 ![](images/QRCODES.png)
 
 ## Usage
 
 1. Open the iScan app on your mobile device.
 2. Use the QR code scanner to scan a QR code from a business card or any QR-enabled material.
-3. Wait for the app to extract and summarize the information using AI.
-4. Receive the summarized details instantly via SMS or email.
+3. User can copy the information or send it to himself (If No Internet!).
+4. Wait for the app to extract and summarize the information using AI.
+5. Receive the summarized details instantly via SMS or email.
 
 ## Contributing
 
