@@ -3,5 +3,5 @@ requests
 waitress
 Gunicorn
 sendgrid
-google-generativeai
+ai71
 twilio
