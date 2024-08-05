@@ -10,6 +10,15 @@ In today's digital age, traditional printed business cards contribute significan
 
 ![](images/iSCAN_T.png)
 
+## Running the Flask API Locally
+The main file is `app.py`, which is a Python Flask API with `POST` & `GET` requests deployed on Render. This API listens for requests from our Flutter application every time the "Send" button is pressed. If you want to run this code locally, follow these steps:
+
+- Clone the repo
+- Ensure you have the Falcon AI71 API access. Create & and add it to a `.env` file in your project directory.
+- Install dependencies `pip install -r requirements.txt` file.
+- Run `python app.py` first, then run `python test.py` with the dummy data to ensure everything is set up correctly.
+- You will be able to see the results (a constructed sentence in your command line)
+
 ## Features
 
 - **QR Code Scanning**: Scan QR codes from business cards or any QR-enabled material.
