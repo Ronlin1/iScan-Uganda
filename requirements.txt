@@ -1,0 +1,7 @@
+Flask
+requests
+waitress
+Gunicorn
+sendgrid
+google-generativeai
+twilio
