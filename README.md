@@ -6,14 +6,14 @@ iScan is a Flutter mobile application designed to simplify business-card managem
 
 ## Overview
 
-In today's digital age, traditional printed business cards contribute significantly to our carbon footprint and can be easily lost or misplaced. iScan addresses these challenges by allowing users to scan QR codes from business cards, extract relevant information, post the data to a Flask API, then summarize it using Gemini API (RAG) Generative AI, and instantly receive the details via Twilio SMS or SendGrid email. This eliminates the need for physical cards and ensures that valuable connections are never lost...
+In today's digital age, traditional printed business cards contribute significantly to our carbon footprint and can be easily lost or misplaced. iScan addresses these challenges by allowing users to scan QR codes from business cards, extract relevant information, post the data to a Flask API, then summarize it using Falcon API (RAG) Generative AI, and instantly receive the details via Twilio SMS or SendGrid email. This eliminates the need for physical cards and ensures that valuable connections are never lost...
 
 ![](images/iSCAN_T.png)
 
 ## Features
 
 - **QR Code Scanning**: Scan QR codes from business cards or any QR-enabled material.
-- **AI-powered Summarization**: Utilize Gemini API (RAG) Generative AI to summarize extracted information into concise details.
+- **AI-powered Summarization**: Utilize Falcon API (RAG) Generative AI to summarize extracted information into concise details.
 - **Twilio Integration**: Send extracted information via SMS using Twilio's SMS service.
 - **SendGrid Integration**: Send detailed information via email using SendGrid's email service.
 - **Eco-friendly Solution**: Reduce carbon footprint by minimizing the use of printed business cards.
@@ -50,7 +50,7 @@ The user will be able to signup with their information so that they receive thes
 ![](images/iScanQR.png)
 
 ## Code Structure
-The Main API Logic is `app.py` file handling all Twilio and Summarization with Generative AI (Gemini API). The web folder contains the website portfolio and the code for Flutter app is private currently.
+The Main API Logic is `app.py` file handling all Twilio and Summarization with Generative AI (Falcon API). The web folder contains the website portfolio and the code for Flutter app is private currently.
 
 - Visit Web: https://iscanweb.onrender.com/
 - Visit Demo: https://tinyurl.com/2xd7dkhb
@@ -65,7 +65,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Flutlab](https://flutlab.io/) - Flutter Online IDE
 - [Twilio](https://www.twilio.com/) - For enabling seamless SMS communication.
 - [SendGrid](https://sendgrid.com/) - For facilitating reliable email delivery.
-- [Google Generative AI](https://ai.google.dev/gemini-api/) - For providing advanced AI capabilities through Gemini API (RAG).
+- [Falcon LLM 180b](https://falconllm.tii.ae/) - For providing advanced AI capabilities through Falcon API (RAG).
 - [Flask - Python](https://flask.palletsprojects.com/) - Building the API
 - [Render](https://render.com/) - Hosting the API
 - [Canva](https://canva.com/) - Media & Graphics
