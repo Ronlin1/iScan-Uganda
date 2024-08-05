@@ -5,3 +5,4 @@ Gunicorn
 sendgrid
 ai71
 twilio
+python-dotenv
