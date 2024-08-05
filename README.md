@@ -62,13 +62,13 @@ The user will be able to signup with their information so that they receive thes
 The Main API Logic is `app.py` file handling all Twilio and Summarization with Generative AI (Falcon API). The web folder contains the website portfolio and the code for Flutter app is private currently.
 
 - Visit Web: https://iscanweb.onrender.com/
-- Visit Demo: https://tinyurl.com/2xd7dkhb
+- Visit Demo: https://youtu.be/V6bb7ch89qA
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## Acknowledgments & Tech Used
 
 - [Flutter](https://flutter.dev/) - For providing a framework for building cross-platform apps.
 - [Flutlab](https://flutlab.io/) - Flutter Online IDE
